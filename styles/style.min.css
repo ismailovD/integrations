@@ -1246,6 +1246,7 @@ body {
     font-size: 14px;
     line-height: 21px;
     text-align: center;
+    cursor: pointer;
 }
 .brands__btn-update {
     width: 66px; 
