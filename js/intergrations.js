@@ -157,25 +157,25 @@ function changeSwiper() {
     })
 }
 
-class Ugrade {
-    constructor(option) {
-        this.buttons = document.querySelectorAll(option.el);
-        this.parent = option.parent;
-        this.buttons.forEach(btn => {
-            btn.addEventListener('click', ()=> { 
-                this.enabledInput(btn)
-            })
-        })
-    }
+// class Ugrade {
+//     constructor(option) {
+//         this.buttons = document.querySelectorAll(option.el);
+//         this.parent = option.parent;
+//         this.buttons.forEach(btn => {
+//             btn.addEventListener('click', ()=> { 
+//                 this.enabledInput(btn)
+//             })
+//         })
+//     }
 
-    enabledInput(e){
-        let parent = e.closest(this.parent);
-        parent.querySelector('input').disabled = false;
-    }
+//     enabledInput(e){
+//         let parent = e.closest(this.parent);
+//         parent.querySelector('input').disabled = false;
+//     }
 
-}
+// }
 
-const btns = new Ugrade({
-    el: '.brands__btn-update',
-    parent: '.brands__control'
-})
+// const btns = new Ugrade({
+//     el: '.brands__btn-update',
+//     parent: '.brands__control'
+// })
