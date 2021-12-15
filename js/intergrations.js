@@ -2,7 +2,7 @@ const   sideBarBtn = document.querySelector('.side-bar__btn'),
         sideBar = document.querySelector('.side-bar'), 
         pageContent =document.querySelector('.global__content'), 
         dropdownList = document.querySelector('.side-bar__settings'),
-        dropdownBtn = document.querySelector('.side-bar__dropdown'),
+        dropdownBtn = document.querySelector('.side-bar__dropdown'), 
         visitedPage = document.querySelectorAll('.global-item'),
         userDropdown = document.querySelector('.global__auth'),
         userBtn = document.querySelector('.user__dropdown-btn'),
@@ -19,21 +19,17 @@ const   sideBarBtn = document.querySelector('.side-bar__btn'),
         poperBg = document.querySelector('.warning__wrapper'),
         poperClose = document.querySelector('.warning__close'), 
         upgradeBtn = document.querySelector('#applicable-upgrade'),
-        applicableAddInput = document.querySelector('.applicable__text-input');
+        applicableAddInput = document.querySelector('.applicable__text-input'),
         body = document.querySelector('body');
         
  
 sideBarBtn.addEventListener('click', () => {
     sideBar.classList.toggle('active'); 
         if(sideBar.classList.contains('active')){  
-            pageContent.style.marginLeft = "275px"; 
-            intergrationContent.classList.add('change')
-            defaultSwiper()
+            pageContent.style.marginLeft = "275px";   
     }else {  
         dropdownList.classList.remove('active')
-        pageContent.style.marginLeft = "65px";  
-        intergrationContent.classList.remove('change');
-            changeSwiper()
+        pageContent.style.marginLeft = "65px";    
     }
 }); 
 dropdownBtn.addEventListener('click', () => {
@@ -99,83 +95,25 @@ const swiperBrands = new Swiper('.brands__swiper', {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
+    breakpointsBase: 'container',
     breakpoints: {
         350: {
             slidesPerView:2, 
         } ,
-        950: {
+        550: {
            slidesPerView: 3, 
          },
-         1150: {
+         750: {
            slidesPerView: 4, 
          },
-         1350: {
+         1150: {
            slidesPerView: 5,
+           spaceBetween: 15,
+         },
+         1350: {
+           slidesPerView: 6,
            spaceBetween: 15,
          } 
        },    
 })
-function defaultSwiper() {
-    const swiperBrands = new Swiper('.brands__swiper', {  
-        spaceBetween:30,
-        breakpoints: {
-            350: {
-                slidesPerView:2, 
-            } ,
-            950: {
-               slidesPerView: 3, 
-             },
-             1150: {
-               slidesPerView: 4, 
-             },
-             1350: {
-               slidesPerView: 5,
-               spaceBetween: 15,
-             } 
-           },    
-    })
-}
-
-function changeSwiper() {
-    const swiperBrands = new Swiper('.brands__swiper', {  
-        spaceBetween:30,
-        breakpoints: {
-            350: {
-                slidesPerView:3, 
-            } ,
-            950: {
-               slidesPerView: 4, 
-             },
-             1150: {
-               slidesPerView: 5, 
-             },
-             1350: {
-               slidesPerView: 6,
-               spaceBetween: 15,
-             } 
-           },    
-    })
-}
-
-// class Ugrade {
-//     constructor(option) {
-//         this.buttons = document.querySelectorAll(option.el);
-//         this.parent = option.parent;
-//         this.buttons.forEach(btn => {
-//             btn.addEventListener('click', ()=> { 
-//                 this.enabledInput(btn)
-//             })
-//         })
-//     }
-
-//     enabledInput(e){
-//         let parent = e.closest(this.parent);
-//         parent.querySelector('input').disabled = false;
-//     }
-
-// }
-
-// const btns = new Ugrade({
-//     el: '.brands__btn-update',
-//     parent: '.brands__control'
-// })
+ 

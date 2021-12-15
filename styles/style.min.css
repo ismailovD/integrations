@@ -12,6 +12,7 @@
     --blue: #473E9E;
     --blue-opacity: rgba(72, 62, 158, 0.7);
     --light-blue: #3291E9;
+    --ultra-light-blue: #84BDF2;
     --light-blue-opacity: rgba(50, 145, 233, 0.15);
     --white: #fff;
     --black: #000;
@@ -1127,8 +1128,9 @@ body {
     padding: 0px 30px 30px;
     position: relative;
     margin-bottom: 30px;
+    width: 100%;
 }
-
+ 
 .brands__title {
     position: absolute;
     top: 19px;
@@ -1149,12 +1151,13 @@ body {
     background: var(--white); 
     min-height: 151px; 
 }
+
 .brands__card {
     border-radius: var(--border-radius-small);
     padding: 0 15px 25px;
     border: 1px solid var(--return-input-bg);
     position: relative; 
-    height: 100%;
+    height: 100%; 
 }
 .brands__pic { 
     width: 100%;
@@ -1253,7 +1256,9 @@ body {
     background: var(--light-blue);
     color: var(--white);
 }
-
+.brands__btn-update:disabled {
+    background: var(--ultra-light-blue);
+}
 .brands__prev,
 .brands__next {
     width: 30px;
