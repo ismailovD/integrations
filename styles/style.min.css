@@ -680,7 +680,7 @@ body {
 }
 .global__search-dropdown {
     position: absolute;
-    top: 101%;
+    top: 105%;
     left: 0;
     width: 100%;
     z-index: 15;  
