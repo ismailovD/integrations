@@ -650,6 +650,9 @@ body {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     -webkit-box-orient: horizontal;
@@ -669,7 +672,11 @@ body {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    margin-right: auto 
+    margin-right: auto;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    position: relative;
 }
 .global__search-dropdown {
     position: absolute;
@@ -679,7 +686,10 @@ body {
     z-index: 15;  
     background: var(--white);
     border-radius: 0 0 6px 6px;
-    box-shadow: var(--search-shadow);
+    -webkit-box-shadow: var(--search-shadow);
+            box-shadow: var(--search-shadow);
+    -webkit-transition: opacity 0.1s;
+    -o-transition: opacity 0.1s;
     transition: opacity 0.1s;
     opacity: 0;
     display: none;
@@ -693,6 +703,8 @@ body {
 .global__search-list { 
     padding: 10px; 
     max-height: 300px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
     overflow-y: auto; 
     margin: 5px;
